@@ -3,9 +3,13 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import "../node_modules/modern-normalize/modern-normalize.css";
 import App from "./App.jsx";
+import { createBrowserRouter } from "react-router-dom";
+import routes from "./routes.jsx";
+
+const router = createBrowserRouter(routes);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={router}></RouterProvider>
   </StrictMode>,
 );
