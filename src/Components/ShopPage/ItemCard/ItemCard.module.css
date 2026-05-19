@@ -1,0 +1,97 @@
+.itemCard {
+  opacity: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template: 1fr/50% 50%;
+  place-content: center;
+  gap: 1rem;
+  width: 80%;
+  margin: 2rem auto;
+  img {
+    max-width: 600px;
+  }
+  h2 {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+  h3 {
+    font-style: italic;
+    font-weight: 300;
+  }
+  .category {
+    color: grey;
+    margin-bottom: 1rem;
+  }
+  .price {
+    display: block;
+    text-align: end;
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+  .item_addToCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+
+    input,
+    button {
+      font-weight: 100;
+
+      border-radius: 10rem;
+      corner-shape: squircle;
+      outline: none;
+      border-color: transparent;
+      background-color: rgb(240, 240, 240);
+    }
+  }
+  .quantity {
+    width: 100%;
+    display: flex;
+    margin: 1rem 0rem 0.75rem 0rem;
+    justify-content: space-around;
+    gap: 0.25rem;
+
+    input {
+      width: 3rem;
+    }
+  }
+  .addToCart {
+    width: 100%;
+    button {
+      width: 100%;
+      padding-block: 0.5rem;
+    }
+    button {
+      background-color: rgb(0, 0, 115);
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 100;
+      padding: 0.1rem;
+      margin: 0;
+      transition:
+        color 0.5s,
+        background-color 1s;
+    }
+    button:visited {
+      color: rgb(0, 0, 115);
+    }
+    button:hover {
+      color: rgb(0, 0, 115);
+      background-color: rgb(240, 240, 240);
+    }
+  }
+  animation: fadeIn;
+  animation-timeline: view(block 50% 0%);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
