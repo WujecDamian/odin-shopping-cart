@@ -1,7 +1,17 @@
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import { CartContext } from "../../Context/CartContext";
+import { useContext, useEffect } from "react";
 
 const NavBar = () => {
+  const { cart } = useContext(CartContext);
+  let cartQuantity = 0;
+
+  cartQuantity = 0;
+  cart.forEach((product) => {
+    cartQuantity += product.quantity;
+  });
+  console.log(cartQuantity);
   return (
     <nav className={styles.nav}>
       <section className={styles.links}>
@@ -12,7 +22,7 @@ const NavBar = () => {
           Shop
         </Link>
         <Link to="cart" className={styles.link}>
-          Cart
+          Cart <span className={styles.cart_quantity}>{cartQuantity}</span>
         </Link>
       </section>
     </nav>

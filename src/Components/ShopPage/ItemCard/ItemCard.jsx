@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styles from "./ItemCard.module.css";
+import { CartContext } from "../../../Context/CartContext";
 
 const ItemCard = ({ props }) => {
   const [quantity, setQuantity] = useState(0);
+  const { addToCart } = useContext(CartContext);
 
   function handleChange(e) {
     const value = e.target.value;
@@ -45,7 +47,16 @@ const ItemCard = ({ props }) => {
             <button onClick={deductQuantity}>-</button>
           </div>
           <div className={styles.addToCart}>
-            <button>Add to cart</button>
+            <button
+              onClick={() =>
+                addToCart({
+                  product: props,
+                  quantity: quantity,
+                })
+              }
+            >
+              Add to cart
+            </button>
           </div>
         </div>
       </div>
