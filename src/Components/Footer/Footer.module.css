@@ -1,5 +1,11 @@
 .footer {
   position: absolute;
   bottom: 0;
-  width: 90%;
+
+  text-align: center;
+  background-color: rgb(232, 232, 232);
+  width: fit-content;
+  padding: 0.15rem 3rem 0.15rem 3rem;
+  border-radius: 1rem 1rem 0rem 0rem;
+  corner-shape: squircle;
 }
