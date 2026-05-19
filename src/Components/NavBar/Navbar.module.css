@@ -1,6 +1,7 @@
 .nav {
   position: sticky;
   background-color: rgb(232, 232, 232);
+  width: 90%;
   padding: 1rem;
   margin: 1.5rem;
   border-radius: 1rem;
