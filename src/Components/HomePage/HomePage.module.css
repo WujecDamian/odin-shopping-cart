@@ -1,0 +1,57 @@
+.home {
+  margin-block: 2rem;
+  display: grid;
+  grid-template: 1fr/50% 50%;
+  place-content: center;
+  gap: 2rem;
+}
+
+.home__left {
+  text-align: right;
+  font-size: 3rem;
+  align-self: center;
+  h1 {
+    margin: 0;
+    font-size: 4em;
+    line-height: 9rem;
+  }
+  h2 {
+    line-height: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    span {
+      font-style: italic;
+      font-weight: 100;
+    }
+  }
+  .link {
+    color: rgb(0, 0, 115);
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1vw;
+    font-weight: 100;
+    padding: 0.1rem;
+    margin: 0;
+    transition:
+      color 0.5s,
+      background-color 1s;
+  }
+  .link:visited {
+    color: rgb(0, 0, 115);
+  }
+  .link:hover {
+    background-color: rgb(0, 0, 115);
+    color: white;
+  }
+}
+.home__right {
+  img {
+    max-width: 600px;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 5rem;
+    corner-shape: squircle;
+  }
+}
