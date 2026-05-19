@@ -95,3 +95,7 @@
     opacity: 1;
   }
 }
+
+.itemCard:first-child {
+  opacity: 1;
+}
