@@ -5,3 +5,5 @@ const ErrorElement = () => {
     </section>
   );
 };
+
+export default ErrorElement;
