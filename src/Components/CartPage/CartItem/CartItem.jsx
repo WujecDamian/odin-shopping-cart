@@ -11,22 +11,23 @@ const CartItem = ({ props }) => {
   }, []);
 
   function handleChange(e) {
-    const value = e.target.value;
-    setQuantity(value);
-    setCartFn(props.product, value);
+    let product = props.product;
+    const value = Number(e.target.value);
+    setQuantity(Number(value));
+    setCartFn({ product, quantity: value });
   }
   function addQuantity() {
-    let quantityOld = Number(quantity);
-    let newQuantity = Number(quantityOld + 1);
-    setQuantity(Number(newQuantity));
-    setCartFn(props.product, newQuantity);
+    let newQuantity = Number(props.quantity) + 1;
+    let product = props.product;
+    setQuantity(newQuantity);
+    setCartFn({ product, quantity: newQuantity });
   }
   function deductQuantity() {
     if (quantity > 0) {
-      let newQuantity = props.quantity - 1;
+      let newQuantity = Number(props.quantity) - 1;
       let product = props.product;
-      setQuantity(newQuantity);
-      setCartFn({ product, newQuantity });
+      setQuantity(Number(newQuantity));
+      setCartFn({ product, quantity: newQuantity });
     }
   }
   return (
