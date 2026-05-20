@@ -9,9 +9,12 @@ const CartProvider = ({ children }) => {
     setCart([...cart, { product: product, quantity: quantity }]);
     console.table(cart);
   }
+  function setCartFn({ product, quantity }) {
+    setCart([...cart, { product: product, quantity: quantity }]);
+  }
 
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider value={{ cart, addToCart, setCartFn }}>
       {children}
     </CartContext.Provider>
   );
