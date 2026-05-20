@@ -8,7 +8,7 @@ const ItemCard = ({ props }) => {
 
   function handleChange(e) {
     const value = e.target.value;
-    setQuantity(value);
+    setQuantity(Number(value));
   }
   function addQuantity() {
     let quantityOld = Number(quantity);
