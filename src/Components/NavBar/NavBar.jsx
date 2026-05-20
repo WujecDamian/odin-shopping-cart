@@ -14,7 +14,7 @@ const NavBar = () => {
   return (
     <nav className={styles.nav}>
       <section className={styles.links}>
-        <Link to="home" className={styles.link}>
+        <Link to="/" className={styles.link}>
           Home
         </Link>
         <Link to="shop" className={styles.link}>
