@@ -14,7 +14,6 @@ const CartProvider = ({ children }) => {
   function setCartFn({ product, quantity }) {
     let newItem = { product: product, quantity: quantity };
     let modifiedId = product.id;
-    console.log("Modified ID " + modifiedId);
     let newCart = cart.filter((Product) => Product.product.id != modifiedId);
     newCart.push(newItem);
     const sortedCart = newCart.sort((a, b) => a.product.id - b.product.id);

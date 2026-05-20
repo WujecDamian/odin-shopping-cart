@@ -5,7 +5,6 @@ import CartItem from "./CartItem/CartItem";
 
 const CartPage = () => {
   const { cart } = useContext(CartContext);
-  console.table({ cart });
   const listProducts = cart.map((product) => (
     <CartItem props={product} key={product.product.id}></CartItem>
   ));

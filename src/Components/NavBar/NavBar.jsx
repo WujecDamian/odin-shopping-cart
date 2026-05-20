@@ -11,7 +11,6 @@ const NavBar = () => {
   cart.forEach((product) => {
     cartQuantity += product.quantity;
   });
-  console.log(cartQuantity);
   return (
     <nav className={styles.nav}>
       <section className={styles.links}>
