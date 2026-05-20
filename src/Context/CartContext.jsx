@@ -6,15 +6,19 @@ const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   function addToCart({ product, quantity }) {
-    setCart([...cart, { product: product, quantity: quantity }]);
-    console.table(cart);
+    let newItem = { product: product, quantity: quantity };
+    const newCart = [...cart, newItem];
+    const sortedCart = newCart.sort((a, b) => a.product.id - b.product.id);
+    setCart(sortedCart);
   }
   function setCartFn({ product, quantity }) {
     let newItem = { product: product, quantity: quantity };
     let modifiedId = product.id;
     console.log("Modified ID " + modifiedId);
     let newCart = cart.filter((Product) => Product.product.id != modifiedId);
-    setCart([...newCart, newItem]);
+    newCart.push(newItem);
+    const sortedCart = newCart.sort((a, b) => a.product.id - b.product.id);
+    setCart(sortedCart);
   }
 
   return (
