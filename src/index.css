@@ -18,3 +18,13 @@ body {
   max-height: 100%;
   margin: 0 auto; /* center body if max-width <100% */
 }
+
+@media (max-width: 768px) {
+  #root {
+    padding: 0 0.75rem;
+  }
+
+  body {
+    min-height: auto;
+  }
+}
