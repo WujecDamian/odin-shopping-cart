@@ -5,3 +5,15 @@
   flex-direction: column;
   margin-top: 10rem;
 }
+
+@media (max-width: 768px) {
+  .shop {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .products {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+}
