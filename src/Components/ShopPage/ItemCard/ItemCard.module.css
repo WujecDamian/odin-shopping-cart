@@ -99,3 +99,33 @@
 .itemCard:first-child {
   opacity: 1;
 }
+
+@media (max-width: 780px) {
+  .itemCard {
+    min-height: auto;
+    grid-template: 1fr / 1fr;
+    width: 95%;
+    margin: 1.25rem auto;
+  }
+
+  .itemCard img {
+    max-width: 100%;
+  }
+
+  .price {
+    text-align: start;
+  }
+
+  .item_addToCart {
+    width: 100%;
+  }
+
+  .quantity {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .quantity input {
+    width: 4rem;
+  }
+}
