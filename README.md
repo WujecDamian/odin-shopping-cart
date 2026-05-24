@@ -10,7 +10,7 @@ Simple shopping cart project from The Odin Project React course. / React 80% /
 - Add to cart with quantity
 - View and edit your cart (change quantity, remove items)
 - Live total price
-- WARNING: Not suitable for mobile
+- Mobile friendly
 
 ## Tech
 
